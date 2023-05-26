@@ -1,0 +1,18 @@
+<div class="border-bottom row" style="margin-bottom:16px;padding-bottom:4px;">
+    <div class="col-2">
+        <h4 style="color:rgb(120,120,120);margin-bottom:4px;">
+            {{produktas['pavadinimas']}}
+        </h4>
+        <div>
+            <b>Aprasymas:</b> {{produktas['aprasymas']}}
+        </div>
+        {% if 'kaina' in produktas %}
+        <div>
+            <b>Kaina:</b> {{produktas['kaina']}}
+        </div>
+        {% endif %}
+    </div>
+    <div class="col-3">
+        <button type="button" class="btn btn-outline-primary">Pirkti</button>
+    </div>
+</div>
