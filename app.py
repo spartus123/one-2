@@ -1,20 +1,19 @@
-from typing import List, Dict
-
+from typing import List, Dict, Union
 from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
-PRODUKTAI: list[dict[str, str | int] | dict[str, str | int]] = [
+PRODUKTAI: List[Dict[str, Union[str, int]]] = [
     {
         'id': 1,
         'pavadinimas': "Logitech pele",
-        'aprasymas':   "bla bla",
+        'aprasymas': "bla bla",
         'kaina': 300,
     },
     {
         'id': 2,
         'pavadinimas': "Trust klaviatura",
-        'aprasymas':   "tuoj bus",
+        'aprasymas': "tuoj bus",
         'kaina': 400,
     }
 ]
