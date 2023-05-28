@@ -28,11 +28,11 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/produktai" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produktai</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Dropdown Item 1</a>
-            <a class="dropdown-item" href="#">Dropdown Item 2</a>
-            <a class="dropdown-item" href="#">Dropdown Item 3</a>
-          </div>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Dropdown Item 1</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown Item 2</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown Item 3</a></li>
+          </ul>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -49,14 +49,12 @@
   var dropdownToggleList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
   dropdownToggleList.forEach(function(dropdownToggle) {
     var dropdownMenu = dropdownToggle.nextElementSibling;
-    dropdownToggle.addEventListener('mouseenter', function() {
-      dropdownMenu.classList.add('show');
-    });
-    dropdownToggle.addEventListener('mouseleave', function() {
-      dropdownMenu.classList.remove('show');
-    });
-    dropdownMenu.addEventListener('mouseleave', function() {
-      dropdownMenu.classList.remove('show');
+    dropdownToggle.addEventListener('click', function() {
+      if (dropdownMenu.style.display === 'none') {
+        dropdownMenu.style.display = 'block';
+      } else {
+        dropdownMenu.style.display = 'none';
+      }
     });
   });
 })();
