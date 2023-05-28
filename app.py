@@ -26,5 +26,21 @@ def hello_world():
 def list_produktai():
     return jsonify(PRODUKTAI)
 
+@app.route("/apie_mus")
+def apie_mus():
+    return render_template('apie_mus.html')
+
+@app.route("/kontaktai")
+def kontaktai():
+    return render_template('kontaktai.html')
+
+@app.route("/naujienos")
+def naujienos():
+    return render_template('naujienos.html')
+
+@app.route("/produktai")
+def produktai():
+    return render_template('produktai.html')
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
