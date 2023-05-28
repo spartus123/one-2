@@ -30,6 +30,10 @@
   .navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
   }
+  
+  .ml-auto {
+    margin-left: auto !important;
+  }
 </style>
 
 <nav class="navbar shadow-sm navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -49,6 +53,12 @@
         <li class="nav-item">
           <a class="nav-link" href="/naujienos">Naujienos</a>
         </li>
+      </ul>
+      <form class="d-flex ml-auto">
+        <input class="form-control me-2" type="search" placeholder="Ieškoti" aria-label="Ieškoti">
+        <button class="btn btn-outline-success" type="submit">Ieškoti</button>
+      </form>
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produktai</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -58,10 +68,6 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Ieškoti" aria-label="Ieškoti">
-        <button class="btn btn-outline-success" type="submit">Ieškoti</button>
-      </form>
     </div>
   </div>
 </nav>
@@ -82,4 +88,4 @@
   });
 })();
 </script>
-{% endblock %}
+{% endblock
