@@ -17,6 +17,9 @@
     {% include 'nav.html' %}
     <div class="container">
         <img class="img-fluid" id="banner" src="static/nuotrauka.jpg" width="500" height="240">
+        {% block content %}
+       
+        {% endblock %}
         {% include 'footer.html' %}
     </div>
 </body>
