@@ -22,6 +22,22 @@ PRODUKTAI: List[Dict[str, Union[str, int]]] = [
 def hello_world():
     return render_template('home.html', produktai=PRODUKTAI)
 
+@app.route("/Apie mus")
+def hello_world():
+    return render_template('apie_mus.html')
+
+@app.route("/Kontaktai")
+def hello_world():
+    return render_template('kontaktai.html')
+
+@app.route("/Naujienos")
+def hello_world():
+    return render_template('naujienos.html')
+
+@app.route("/Produktai")
+def hello_world():
+    return render_template('produktai.html')
+
 @app.route("/produktai")
 def list_produktai():
     return jsonify(PRODUKTAI)
