@@ -32,4 +32,23 @@
     </div>
   </div>
 </nav>
+
+<script>
+// Enable dropdown hover behavior
+(function() {
+  var dropdownToggleList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+  dropdownToggleList.forEach(function(dropdownToggle) {
+    var dropdownMenu = dropdownToggle.nextElementSibling;
+    dropdownToggle.addEventListener('mouseenter', function() {
+      dropdownMenu.classList.add('show');
+    });
+    dropdownToggle.addEventListener('mouseleave', function() {
+      dropdownMenu.classList.remove('show');
+    });
+    dropdownMenu.addEventListener('mouseleave', function() {
+      dropdownMenu.classList.remove('show');
+    });
+  });
+})();
+</script>
 {% endblock %}
