@@ -1,11 +1,33 @@
 {% block content %}
 <style>
   .navbar-nav {
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .dropdown {
+    position: relative;
+  }
+  
+  .navbar-nav .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+  
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
   }
 </style>
 
@@ -27,7 +49,7 @@
           <a class="nav-link" href="/naujienos">Naujienos</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/produktai" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produktai</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produktai</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Dropdown Item 1</a></li>
             <li><a class="dropdown-item" href="#">Dropdown Item 2</a></li>
