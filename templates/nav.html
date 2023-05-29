@@ -3,7 +3,6 @@
   .navbar-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Changed justify-content property */
     align-items: center;
   }
 
@@ -45,9 +44,20 @@
         <li class="nav-item">
           <a class="nav-link" href="/kontaktai">Kontaktai</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/naujienos">Naujienos</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produktai</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Dropdown Item 1</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown Item 2</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown Item 3</a></li>
+          </ul>
         </li>
+      </ul>
+      <form class="d-flex ml-auto"> <!-- Added ml-auto class to move the search button and field to the right -->
+        <input class="form-control me-2" type="search" placeholder="Ieškoti" aria-label="Ieškoti">
+        <button class="btn btn-outline-success" type="submit">Ieškoti</button>
+      </form>
+      <ul class="navbar-nav"> <!-- Moved the Cart button here -->
         <li class="nav-item">
           <form class="d-flex">
             <button class="btn btn-outline-dark" type="submit">
@@ -57,19 +67,7 @@
             </button>
           </form>
         </li>
-        <li class="nav-item dropdown"> <!-- Moved the dropdown button here -->
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produktai</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Dropdown Item 1</a></li>
-            <li><a class="dropdown-item" href="#">Dropdown Item 2</a></li>
-            <li><a class="dropdown-item" href="#">Dropdown Item 3</a></li>
-          </ul>
-        </li>
       </ul>
-      <form class="d-flex"> <!-- Removed mx-auto class to keep it on the left side -->
-        <input class="form-control me-2" type="search" placeholder="Ieškoti" aria-label="Ieškoti">
-        <button class="btn btn-outline-success" type="submit">Ieškoti</button>
-      </form>
     </div>
   </div>
 </nav>
