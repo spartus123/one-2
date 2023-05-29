@@ -15,41 +15,12 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-        
+
         .card-img-top {
-            height: 100%; /* Set height to 100% to occupy entire block */
+            height: 225px; /* Adjust the height as needed */
             object-fit: cover;
         }
-        
-        .card-overlay {
-            position: relative;
-        }
-        
-        .card-overlay .card-img-top {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .card-overlay .card-body {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-        }
-        
-        .card-overlay .btn-group {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-        }
-        
+
         @media (max-width: 767px) {
             .banner {
                 height: 200px; /* Adjust the height for smaller devices */
@@ -62,44 +33,63 @@
     <div class="container-fluid p-0">
         <div class="banner"></div> <!-- Add the banner div here -->
     </div>
-    <main>
-        <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm card-overlay">
-                            <img class="card-img-top" src="static/nuotrauka2.jpg">
-                            <div class="card-body">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+    <div class="container">
+        <div class="container px-4 px-lg-5 my-5">
+            {% block content %}
+            <main>
+            <div class="album py-5 bg-body-tertiary">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="card-img-top" src="static/nuotrauka2.jpg" >
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        </div>
+                                        <small class="text-body-secondary"></small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm card-overlay">
-                            <img class="card-img-top" src="static/nuotrauka3.jpg">
-                            <div class="card-body">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="card-img-top" src="static/nuotrauka3.jpg" >
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        </div>
+                                        <small class="text-body-secondary"></small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm card-overlay">
-                            <img class="card-img-top" src="static/nuotrauka4.jpg">
-                            <div class="card-body">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="card-img-top" src="static/nuotrauka4.jpg" >
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                         </div>
+                                        <small class="text-body-secondary"></small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </main>
+
+            {% endblock %}
         </div>
-    </main>
+    </div>
     {% include 'footer.html' %}
 </body>
 </html>
