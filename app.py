@@ -42,5 +42,18 @@ def naujienos():
 def produktai():
     return render_template('produktai.html')
 
+@app.route("/pristatymas")
+def pristatymas():
+    return render_template('pristatymas.html')
+
+@app.route("/grazinimas")
+def grazinimas():
+    return render_template('grazinimas.html')
+
+@app.route("/privatumo_politika")
+def privatumo_politika():
+    return render_template('privatumo_politika.html')
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
