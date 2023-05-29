@@ -3,6 +3,7 @@
   .navbar-nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-between; /* Changed justify-content property */
     align-items: center;
   }
 
@@ -53,11 +54,11 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex ml-auto"> <!-- Added ml-auto class to move the search button and field to the right -->
+      <form class="d-flex mx-auto"> <!-- Added mx-auto class for center alignment -->
         <input class="form-control me-2" type="search" placeholder="Ieškoti" aria-label="Ieškoti">
         <button class="btn btn-outline-success" type="submit">Ieškoti</button>
       </form>
-      <ul class="navbar-nav"> <!-- Moved the Cart button here -->
+      <ul class="navbar-nav"> <!-- Moved the Cart button to the right -->
         <li class="nav-item">
           <form class="d-flex">
             <button class="btn btn-outline-dark" type="submit">
