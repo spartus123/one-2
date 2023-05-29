@@ -18,6 +18,10 @@
         
         .content {
             flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         
         h1 {
@@ -42,8 +46,8 @@
 </head>
 <body>
     <div class="container">
+        {% include 'nav.html' %}
         <div class="content">
-            {% include 'nav.html' %}
             <div class="container-fluid p-0">
                 <div class="banner"></div>
             </div>
