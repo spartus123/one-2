@@ -23,7 +23,7 @@
 
         .container {
             position: relative;
-            width: 50%; /* Adjust the width as needed */
+            width: 50%;
         }
 
         .container .btn {
@@ -39,10 +39,6 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
-        }
-
-        .container .btn:hover {
-            background-color: black;
         }
 
         @media (max-width: 767px) {
@@ -61,37 +57,38 @@
         <div class="container px-4 px-lg-5 my-5">
             {% block content %}
             <main>
-                <div class="album py-5 bg-body-tertiary">
-                    <div class="container">
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                            <div class="col">
-                                <div class="card shadow-sm">
-                                    <div class="container">
-                                        <img class="card-img-top" src="static/nuotrauka2.jpg" alt="Image 1">
-                                        <button class="btn">Button 1</button>
-                                    </div>
+            <div class="album py-5 bg-body-tertiary">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container">
+                                    <img class="card-img-top" src="static/nuotrauka2.jpg">
+                                    <button class="btn">Button</button>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="card shadow-sm">
-                                    <div class="container">
-                                        <img class="card-img-top" src="static/nuotrauka3.jpg" alt="Image 2">
-                                        <button class="btn">Button 2</button>
-                                    </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container">
+                                    <img class="card-img-top" src="static/nuotrauka3.jpg">
+                                    <button class="btn">Button</button>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="card shadow-sm">
-                                    <div class="container">
-                                        <img class="card-img-top" src="static/nuotrauka4.jpg" alt="Image 3">
-                                        <button class="btn">Button 3</button>
-                                    </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="container">
+                                    <img class="card-img-top" src="static/nuotrauka4.jpg">
+                                    <button class="btn">Button</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
+        </main>
+
             {% endblock %}
         </div>
     </div>
