@@ -21,6 +21,37 @@
             object-fit: cover;
         }
 
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #555;
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .container .btn:hover {
+            background-color: black;
+        }
+
         @media (max-width: 767px) {
             .banner {
                 height: 200px; /* Adjust the height for smaller devices */
@@ -42,18 +73,26 @@
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         <div class="col">
                             <div class="card shadow-sm">
-                                <img class="card-img-top" src="static/nuotrauka2.jpg" >
-                                <button class="btn">Button</button>
+                                <div class="container">
+                                    <img class="card-img-top" src="static/nuotrauka2.jpg">
+                                    <button class="btn">Button</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card shadow-sm">
-                                <img class="card-img-top" src="static/nuotrauka3.jpg" >
+                                <div class="container">
+                                    <img class="card-img-top" src="static/nuotrauka3.jpg">
+                                    <button class="btn">Button</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card shadow-sm">
-                                <img class="card-img-top" src="static/nuotrauka4.jpg" >
+                                <div class="container">
+                                    <img class="card-img-top" src="static/nuotrauka4.jpg">
+                                    <button class="btn">Button</button>
+                                </div>
                             </div>
                         </div>
                     </div>
