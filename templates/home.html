@@ -21,6 +21,30 @@
             object-fit: cover;
         }
 
+        .container {
+            position: relative;
+            width: 50%; /* Adjust the width as needed */
+        }
+
+        .container .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #555;
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .container .btn:hover {
+            background-color: black;
+        }
+
         @media (max-width: 767px) {
             .banner {
                 height: 200px; /* Adjust the height for smaller devices */
@@ -37,29 +61,37 @@
         <div class="container px-4 px-lg-5 my-5">
             {% block content %}
             <main>
-            <div class="album py-5 bg-body-tertiary">
-                <div class="container">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img class="card-img-top" src="static/nuotrauka2.jpg" >
+                <div class="album py-5 bg-body-tertiary">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="container">
+                                        <img class="card-img-top" src="static/nuotrauka2.jpg" alt="Image 1">
+                                        <button class="btn">Button 1</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img class="card-img-top" src="static/nuotrauka3.jpg" >
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="container">
+                                        <img class="card-img-top" src="static/nuotrauka3.jpg" alt="Image 2">
+                                        <button class="btn">Button 2</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img class="card-img-top" src="static/nuotrauka4.jpg" >
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="container">
+                                        <img class="card-img-top" src="static/nuotrauka4.jpg" alt="Image 3">
+                                        <button class="btn">Button 3</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
-
+            </main>
             {% endblock %}
         </div>
     </div>
