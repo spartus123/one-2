@@ -29,6 +29,10 @@
   .navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
   }
+
+  .cart-link {
+    color: #fff; /* Set the text color for the Cart button */
+  }
 </style>
 
 <nav class="navbar shadow-sm navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -61,7 +65,7 @@
       <ul class="navbar-nav"> <!-- Moved the Cart button to the right -->
         <li class="nav-item">
           <form class="d-flex">
-            <button class="btn btn-outline-dark" type="submit">
+            <button class="btn btn-outline-dark cart-link" type="submit"> <!-- Added cart-link class -->
               <i class="bi-cart-fill me-1"></i>
               Cart
               <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
