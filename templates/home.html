@@ -21,7 +21,10 @@
 <body>
     {% include 'nav.html' %}
     <div class="container">
-        <img class="img-fluid" id="banner" src="static/nuotrauka.jpg" width="500" height="240">
+        <img class="py-5" style="background-image: url('your-image-url.jpg'); background-size: cover; background-repeat: no-repeat;">
+        <div class="container px-4 px-lg-5 my-5">
+        </div>    
+            
         {% block content %}
         <main>
             <div class="album py-5 bg-body-tertiary">
