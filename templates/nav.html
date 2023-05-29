@@ -3,29 +3,29 @@
   .navbar-nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between; /* Changed justify-content property */
     align-items: center;
   }
-  
+
   .navbar-nav .nav-item {
     margin-right: 10px;
   }
-  
+
   .navbar-nav .dropdown {
     position: relative;
   }
-  
+
   .navbar-nav .dropdown-toggle::after {
     display: none;
   }
-  
+
   .navbar-nav .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
     display: none;
   }
-  
+
   .navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
   }
@@ -56,6 +56,12 @@
             <li><a class="dropdown-item" href="#">Dropdown Item 3</a></li>
           </ul>
         </li>
+      </ul>
+      <form class="d-flex mx-auto"> <!-- Added mx-auto class for center alignment -->
+        <input class="form-control me-2" type="search" placeholder="Ieškoti" aria-label="Ieškoti">
+        <button class="btn btn-outline-success" type="submit">Ieškoti</button>
+      </form>
+      <ul class="navbar-nav"> <!-- Moved the Cart button to the right -->
         <li class="nav-item">
           <form class="d-flex">
             <button class="btn btn-outline-dark" type="submit">
@@ -66,10 +72,6 @@
           </form>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Ieškoti" aria-label="Ieškoti">
-        <button class="btn btn-outline-success" type="submit">Ieškoti</button>
-      </form>
     </div>
   </div>
 </nav>
