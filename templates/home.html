@@ -17,7 +17,7 @@
         }
 
         .card-img-top {
-            height: 100%; /* Fill the entire height of the card */
+            height: 225px; /* Set the desired height */
             object-fit: cover;
         }
 
@@ -25,6 +25,26 @@
             .banner {
                 height: 200px; /* Adjust the height for smaller devices */
             }
+        }
+        
+        .card {
+            position: relative;
+        }
+        
+        .card .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #555;
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1;
         }
     </style>
 </head>
@@ -37,29 +57,31 @@
         <div class="container px-4 px-lg-5 my-5">
             {% block content %}
             <main>
-            <div class="album py-5 bg-body-tertiary">
-                <div class="container">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img class="card-img-top" src="static/nuotrauka2.jpg" >
+                <div class="album py-5 bg-body-tertiary">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <img class="card-img-top" src="static/nuotrauka2.jpg">
+                                    <button class="btn">Button</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img class="card-img-top" src="static/nuotrauka3.jpg" >
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <img class="card-img-top" src="static/nuotrauka3.jpg">
+                                    <button class="btn">Button</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <img class="card-img-top" src="static/nuotrauka4.jpg" >
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <img class="card-img-top" src="static/nuotrauka4.jpg">
+                                    <button class="btn">Button</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
-
+            </main>
             {% endblock %}
         </div>
     </div>
