@@ -42,10 +42,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/apie_mus">Apie mus</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/kontaktai">Kontaktai</a>
-        </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown"> <!-- Moved the "Produktai" dropdown button here -->
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produktai</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Dropdown Item 1</a></li>
@@ -53,19 +50,19 @@
             <li><a class="dropdown-item" href="#">Dropdown Item 3</a></li>
           </ul>
         </li>
-      </ul>
-      <form class="d-flex mx-auto"> <!-- Added mx-auto class for center alignment -->
-        <input class="form-control me-2" type="search" placeholder="Ieškoti" aria-label="Ieškoti">
-        <button class="btn btn-outline-success" type="submit">Ieškoti</button>
-      </form>
-      <ul class="navbar-nav"> <!-- Moved the Cart button to the right -->
-        <li class="nav-item">
+        <li class="nav-item"> <!-- Moved the Cart button to the right -->
           <form class="d-flex">
             <button class="btn btn-outline-dark" type="submit">
               <i class="bi-cart-fill me-1"></i>
               Cart
               <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
             </button>
+          </form>
+        </li>
+        <li class="nav-item"> <!-- Moved the search field and button next to the Cart button -->
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Ieškoti" aria-label="Ieškoti">
+            <button class="btn btn-outline-success" type="submit">Ieškoti</button>
           </form>
         </li>
       </ul>
