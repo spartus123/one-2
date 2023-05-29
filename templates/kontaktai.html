@@ -1,34 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Kontaktai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <style>
+        html, body {
+            height: 100%;
+        }
+        
+        .container {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
         h1 {
             text-align: center;
             font-size: 24px;
             font-weight: bold;
         }
-
+        
         p {
             text-align: center;
             text-indent: 50px;
             font-size: 18px;
             font-weight: bold;
         }
+        
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>Kontaktai</h1>
-    
-    <p> +37000000000
+    <div class="container">
+        {% include 'nav.html' %}
+        <div class="content">
+            <div class="container-fluid p-0">
+                <div class="banner"></div>
+            </div>
+            <div class="container">
+                <h1>Kontaktai</h1>
+                <p>
+         Tel:  +37000000000
 
- klientams@onesvetaine.lt
+ Email:  klientams@osvetaine.lt
 
- Debesų g. 1, Kaunas, 51369
+ Adresas:  Debesų g. 1, Kaunas, 50125
 
- Įmonės kodas: 0000000
+ Įmonės kodas: 300000000
 
-PVM kodas: LT100000000.</p>
-   
+PVM kodas: LT100000000000
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            {% include 'footer.html' %}
+        </div>
+    </div>
 </body>
 </html>
