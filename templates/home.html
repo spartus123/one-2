@@ -62,50 +62,56 @@
     <div class="container-fluid p-0">
         <div class="banner"></div> <!-- Add the banner div here -->
     </div>
-    <main>
-        <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm card-overlay">
-                            <div class="position-relative">
-                                <img class="card-img-top" src="static/nuotrauka2.jpg">
-                                <div class="card-body">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+    <div class="container">
+        <div class="container px-4 px-lg-5 my-5">
+            {% block content %}
+            <main>
+                <div class="album py-5 bg-body-tertiary">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                            <div class="col">
+                                <div class="card shadow-sm card-overlay">
+                                    <div class="position-relative">
+                                        <img class="card-img-top" src="static/nuotrauka2.jpg">
+                                        <div class="card-body">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm card-overlay">
-                            <div class="position-relative">
-                                <img class="card-img-top" src="static/nuotrauka3.jpg">
-                                <div class="card-body">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <div class="col">
+                                <div class="card shadow-sm card-overlay">
+                                    <div class="position-relative">
+                                        <img class="card-img-top" src="static/nuotrauka3.jpg">
+                                        <div class="card-body">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm card-overlay">
-                            <div class="position-relative">
-                                <img class="card-img-top" src="static/nuotrauka4.jpg">
-                                <div class="card-body">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <div class="col">
+                                <div class="card shadow-sm card-overlay">
+                                    <div class="position-relative">
+                                        <img class="card-img-top" src="static/nuotrauka4.jpg">
+                                        <div class="card-body">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
+            {% endblock %}
         </div>
-    </main>
+    </div>
     {% include 'footer.html' %}
 </body>
 </html>
